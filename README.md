@@ -7,7 +7,7 @@ In case if anyone's curious, she's just sleeping most of the time.
 
 To Use:
 
-1. Build and run this project in 2 iDevices.
+1. Build and run this project in 2 iDevices (any combo of iPhones/iPads).
 2. Select the device you wish to use as webcam
 3. Video streaming starts
 
