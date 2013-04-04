@@ -12,6 +12,8 @@
 		834047EE170C03BE009E3EB1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834047ED170C03BE009E3EB1 /* CoreMedia.framework */; };
 		834047F0170C03C5009E3EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834047EF170C03C5009E3EB1 /* CoreVideo.framework */; };
 		834047F3170C09F5009E3EB1 /* YBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 834047F2170C09F5009E3EB1 /* YBSegment.m */; };
+		8347FEC1170D41A2003E1023 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8347FEBF170D41A2003E1023 /* icon.png */; };
+		8347FEC2170D41A2003E1023 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8347FEC0170D41A2003E1023 /* icon@2x.png */; };
 		8380FA0F170804180049AE61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA0E170804180049AE61 /* UIKit.framework */; };
 		8380FA11170804180049AE61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA10170804180049AE61 /* Foundation.framework */; };
 		8380FA13170804180049AE61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA12170804180049AE61 /* CoreGraphics.framework */; };
@@ -23,7 +25,6 @@
 		8380FA25170804190049AE61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8380FA24170804190049AE61 /* Default-568h@2x.png */; };
 		8380FA28170804190049AE61 /* YBWebcamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380FA27170804190049AE61 /* YBWebcamViewController.m */; };
 		8380FA2B170804190049AE61 /* YBWebcamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8380FA29170804190049AE61 /* YBWebcamViewController.xib */; };
-		8380FA3517080D0C0049AE61 /* banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8380FA3417080D0C0049AE61 /* banner.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		834047EF170C03C5009E3EB1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		834047F1170C09F5009E3EB1 /* YBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBSegment.h; sourceTree = "<group>"; };
 		834047F2170C09F5009E3EB1 /* YBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBSegment.m; sourceTree = "<group>"; };
+		8347FEBF170D41A2003E1023 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		8347FEC0170D41A2003E1023 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8380FA0B170804180049AE61 /* YBWebcam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YBWebcam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380FA0E170804180049AE61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8380FA10170804180049AE61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -51,7 +54,6 @@
 		8380FA26170804190049AE61 /* YBWebcamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YBWebcamViewController.h; sourceTree = "<group>"; };
 		8380FA27170804190049AE61 /* YBWebcamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YBWebcamViewController.m; sourceTree = "<group>"; };
 		8380FA2A170804190049AE61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/YBWebcamViewController.xib; sourceTree = "<group>"; };
-		8380FA3417080D0C0049AE61 /* banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = banner.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +148,8 @@
 		8380FA3117080B3B0049AE61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8380FA3417080D0C0049AE61 /* banner.jpg */,
+				8347FEBF170D41A2003E1023 /* icon.png */,
+				8347FEC0170D41A2003E1023 /* icon@2x.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -208,7 +211,8 @@
 				8380FA23170804190049AE61 /* Default@2x.png in Resources */,
 				8380FA25170804190049AE61 /* Default-568h@2x.png in Resources */,
 				8380FA2B170804190049AE61 /* YBWebcamViewController.xib in Resources */,
-				8380FA3517080D0C0049AE61 /* banner.jpg in Resources */,
+				8347FEC1170D41A2003E1023 /* icon.png in Resources */,
+				8347FEC2170D41A2003E1023 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,20 @@
-//
-//  YBWebcamViewController.m
-//  YBWebcam
-//
-//  Created by Allen Yee on 3/30/13.
-//  Copyright (c) 2013 Allen Yee. All rights reserved.
-//
+
+/**
+ Copyright (c) 2013 Allen Yee
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files
+ (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge,
+ publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do
+ so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE
+ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+**/
+ 
 
 #import "YBWebcamViewController.h"
 #import "YBConstants.h"
@@ -26,6 +36,7 @@
 @property(nonatomic, strong)IBOutlet UIView *cameraView;
 @property(nonatomic, strong)UIImageView *videoImageView;
 @property(nonatomic, strong)NSMutableArray *services;
+@property(nonatomic, strong)NSNetService *myService;
 @property(nonatomic, strong)NSNetServiceBrowser *serviceBrowser;
 @property(nonatomic, assign)BOOL searching;
 @property(nonatomic, strong)TCPServer *server;
@@ -230,7 +241,10 @@
 #pragma mark - NSNetServiceBrowserDelegate
 
 -(void)netServiceBrowser:(NSNetServiceBrowser *)aNetServiceBrowser didFindService:(NSNetService *)aNetService moreComing:(BOOL)moreComing{
-    if(![[[UIDevice currentDevice]name] isEqualToString:aNetService.name]){
+    if([[[UIDevice currentDevice]name] isEqualToString:aNetService.name]){
+        self.myService = aNetService;
+    }
+    else{
         [self.services addObject:aNetService];
     }
     NSLog(@"did find service: %@", self.services);
@@ -276,18 +290,17 @@
         NSLog(@"Failed connecting to server");
     }
     
+    [self.myService stop];
     [netService stop];
     
     [self.view addSubview:self.cameraView];
+    [self.view setAutoresizesSubviews:YES];
+    //self.cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
     UINavigationItem *item = [self navigationItem];
     item.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Close"
                                                               style:UIBarButtonItemStyleBordered
                                                              target:self action:@selector(close)];
     [[self view]setNeedsDisplay];
-//    UIBarButtonItem *closeButton = [[UIBarButtonItem alloc]initWithTitle:@"Close"
-//                                                                   style:UIBarButtonItemStyleBordered
-//                                                                  target:self action:@selector(close)];
-//    [self.navigationController.navigationItem setRightBarButtonItem:closeButton];
     
     [self openStreams];
 }
@@ -413,7 +426,6 @@
         }
         case NSStreamEventEndEncountered:
         {
-            NSLog(@"NSStreamEventEndEncountered");
             if(!self.inStream || !self.outStream){
                 alertView = [[UIAlertView alloc]initWithTitle:@"Other device disconnected!"
                                                       message:nil
@@ -501,9 +513,8 @@
 
 -(void)closeSessions{
     [[NSNotificationCenter defaultCenter]removeObserver:self];
+    _isStalker = NO;
     [self closeStreams];
-    [self.captureSession stopRunning];
-    [self.serviceBrowser searchForServicesOfType:[TCPServer bonjourTypeFromIdentifier:SERVICE_NAME] inDomain:@"local"];
     [self setup];
 }
 
