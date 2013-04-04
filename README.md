@@ -6,11 +6,13 @@ This is my personal project for checking out what my cat is doing while she is i
 In case if anyone's curious, she's just sleeping most of the time.
 
 To Use:
+
 1. Build and run this project in 2 iDevices.
 2. Select the device you wish to use as webcam
 3. Video streaming starts
 
 Basic flow of this project:
+
 1. Set up TCP server
 2. Use NSNetService to publish my services
 3. Use NSNetServiceBrowser to look for services 
