@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		83140F591709680400A8A8AC /* DisplayWebcamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83140F571709680400A8A8AC /* DisplayWebcamViewController.m */; };
-		83140F5A1709680400A8A8AC /* DisplayWebcamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83140F581709680400A8A8AC /* DisplayWebcamViewController.xib */; };
 		83140F5E170968C300A8A8AC /* TCPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83140F5D170968C300A8A8AC /* TCPServer.m */; };
+		834047EC170C03B7009E3EB1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834047EB170C03B7009E3EB1 /* AVFoundation.framework */; };
+		834047EE170C03BE009E3EB1 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834047ED170C03BE009E3EB1 /* CoreMedia.framework */; };
+		834047F0170C03C5009E3EB1 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834047EF170C03C5009E3EB1 /* CoreVideo.framework */; };
+		834047F3170C09F5009E3EB1 /* YBSegment.m in Sources */ = {isa = PBXBuildFile; fileRef = 834047F2170C09F5009E3EB1 /* YBSegment.m */; };
 		8380FA0F170804180049AE61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA0E170804180049AE61 /* UIKit.framework */; };
 		8380FA11170804180049AE61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA10170804180049AE61 /* Foundation.framework */; };
 		8380FA13170804180049AE61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380FA12170804180049AE61 /* CoreGraphics.framework */; };
@@ -25,12 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		83140F561709680300A8A8AC /* DisplayWebcamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayWebcamViewController.h; sourceTree = "<group>"; };
-		83140F571709680400A8A8AC /* DisplayWebcamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayWebcamViewController.m; sourceTree = "<group>"; };
-		83140F581709680400A8A8AC /* DisplayWebcamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayWebcamViewController.xib; sourceTree = "<group>"; };
 		83140F5C170968C300A8A8AC /* TCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCPServer.h; sourceTree = "<group>"; };
 		83140F5D170968C300A8A8AC /* TCPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCPServer.m; sourceTree = "<group>"; };
 		83140F5F170968DC00A8A8AC /* YBConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBConstants.h; sourceTree = "<group>"; };
+		834047EB170C03B7009E3EB1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		834047ED170C03BE009E3EB1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		834047EF170C03C5009E3EB1 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		834047F1170C09F5009E3EB1 /* YBSegment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YBSegment.h; sourceTree = "<group>"; };
+		834047F2170C09F5009E3EB1 /* YBSegment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YBSegment.m; sourceTree = "<group>"; };
 		8380FA0B170804180049AE61 /* YBWebcam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YBWebcam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380FA0E170804180049AE61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8380FA10170804180049AE61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -55,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				834047F0170C03C5009E3EB1 /* CoreVideo.framework in Frameworks */,
+				834047EE170C03BE009E3EB1 /* CoreMedia.framework in Frameworks */,
+				834047EC170C03B7009E3EB1 /* AVFoundation.framework in Frameworks */,
 				8380FA0F170804180049AE61 /* UIKit.framework in Frameworks */,
 				8380FA11170804180049AE61 /* Foundation.framework in Frameworks */,
 				8380FA13170804180049AE61 /* CoreGraphics.framework in Frameworks */,
@@ -68,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				83140F5F170968DC00A8A8AC /* YBConstants.h */,
+				834047F1170C09F5009E3EB1 /* YBSegment.h */,
+				834047F2170C09F5009E3EB1 /* YBSegment.m */,
 				83140F5C170968C300A8A8AC /* TCPServer.h */,
 				83140F5D170968C300A8A8AC /* TCPServer.m */,
 			);
@@ -94,6 +103,9 @@
 		8380FA0D170804180049AE61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				834047EF170C03C5009E3EB1 /* CoreVideo.framework */,
+				834047ED170C03BE009E3EB1 /* CoreMedia.framework */,
+				834047EB170C03B7009E3EB1 /* AVFoundation.framework */,
 				8380FA0E170804180049AE61 /* UIKit.framework */,
 				8380FA10170804180049AE61 /* Foundation.framework */,
 				8380FA12170804180049AE61 /* CoreGraphics.framework */,
@@ -109,9 +121,6 @@
 				8380FA26170804190049AE61 /* YBWebcamViewController.h */,
 				8380FA27170804190049AE61 /* YBWebcamViewController.m */,
 				8380FA29170804190049AE61 /* YBWebcamViewController.xib */,
-				83140F561709680300A8A8AC /* DisplayWebcamViewController.h */,
-				83140F571709680400A8A8AC /* DisplayWebcamViewController.m */,
-				83140F581709680400A8A8AC /* DisplayWebcamViewController.xib */,
 				83140F5B1709689900A8A8AC /* YBWebcam */,
 				8380FA15170804180049AE61 /* Supporting Files */,
 				8380FA3117080B3B0049AE61 /* Resources */,
@@ -200,7 +209,6 @@
 				8380FA25170804190049AE61 /* Default-568h@2x.png in Resources */,
 				8380FA2B170804190049AE61 /* YBWebcamViewController.xib in Resources */,
 				8380FA3517080D0C0049AE61 /* banner.jpg in Resources */,
-				83140F5A1709680400A8A8AC /* DisplayWebcamViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,8 +222,8 @@
 				8380FA1B170804190049AE61 /* main.m in Sources */,
 				8380FA1F170804190049AE61 /* YBWebcamAppDelegate.m in Sources */,
 				8380FA28170804190049AE61 /* YBWebcamViewController.m in Sources */,
-				83140F591709680400A8A8AC /* DisplayWebcamViewController.m in Sources */,
 				83140F5E170968C300A8A8AC /* TCPServer.m in Sources */,
+				834047F3170C09F5009E3EB1 /* YBSegment.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +311,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YBWebcam/YBWebcam-Prefix.pch";
 				INFOPLIST_FILE = "YBWebcam/YBWebcam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -314,6 +323,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YBWebcam/YBWebcam-Prefix.pch";
 				INFOPLIST_FILE = "YBWebcam/YBWebcam-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
